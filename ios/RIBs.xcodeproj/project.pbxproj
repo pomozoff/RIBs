@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2623429F23225EC200BBF36E /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2623429E23225EC200BBF36E /* RxRelay.framework */; };
 		4131772C1F8EF5FF005F08F0 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413177291F8EEFF0005F08F0 /* Builder.swift */; };
 		4131772D1F8EF5FF005F08F0 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413177221F8EEFEF005F08F0 /* Interactor.swift */; };
 		4131772E1F8EF5FF005F08F0 /* LaunchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413177261F8EEFEF005F08F0 /* LaunchRouter.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2623429E23225EC200BBF36E /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = ../Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		413177211F8EEFEF005F08F0 /* Workflow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workflow.swift; sourceTree = "<group>"; };
 		413177221F8EEFEF005F08F0 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		413177231F8EEFEF005F08F0 /* PresentableInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableInteractor.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2623429F23225EC200BBF36E /* RxRelay.framework in Frameworks */,
 				AF9966B21FC40D7E00CAEAA2 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				AF9966B11FC40D7E00CAEAA2 /* RxSwift.framework */,
+				2623429E23225EC200BBF36E /* RxRelay.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -358,14 +362,16 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/../Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/../Carthage/Build/iOS/RxRelay.framework",
 			);
 			name = Carthage;
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxRelay.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
