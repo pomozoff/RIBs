@@ -35,14 +35,8 @@ jobs:
         - IOS_VER=13.2 # Tests must run at the same OS version as $IOS_SDK
         - SIMULATOR_NAME="iPhone 11"
 
-      cache:
-        directories:
-          - $HOME/Carthage
-
       script:
         - set -o pipefail
-        - carthage version
-        - carthage update --platform iOS
         - cd ios
         - xcodebuild -version
         - xcodebuild -showsdks
