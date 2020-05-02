@@ -6,15 +6,14 @@ import RIBs
 
 protocol ___VARIABLE_productName___Dependency: Dependency {
     // TODO: Make sure to convert the variable into lower-camelcase.
-    var ___VARIABLE_productName___ViewController: ___VARIABLE_productName___ViewControllable { get }
+    var ownerViewControllable: ___VARIABLE_productName___ViewControllable { get }
     // TODO: Declare the set of dependencies required by this RIB, but won't be
     // created by this RIB.
 }
 
 final class ___VARIABLE_productName___Component: Component<___VARIABLE_productName___Dependency> {
-    // TODO: Make sure to convert the variable into lower-camelcase.
-    fileprivate var ___VARIABLE_productName___ViewController: ___VARIABLE_productName___ViewControllable {
-        return dependency.___VARIABLE_productName___ViewController
+    fileprivate var ownerViewControllable: ___VARIABLE_productName___ViewControllable {
+        return dependency.ownerViewControllable
     }
 
     // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
@@ -39,7 +38,7 @@ extension ___VARIABLE_productName___Builder: ___VARIABLE_productName___Buildable
 
         return ___VARIABLE_productName___Router(
             interactor: interactor,
-            viewController: component.___VARIABLE_productName___ViewController
+            viewControllable: component.ownerViewControllable
         )
     }
 }

@@ -15,9 +15,9 @@ protocol ___VARIABLE_productName___ViewControllable: ViewControllable {
 
 final class ___VARIABLE_productName___Router: Router<___VARIABLE_productName___Interactable> {
 
-    // TODO: Constructor inject child builder protocols to allow building children.
-    init(interactor: ___VARIABLE_productName___Interactable, viewController: ___VARIABLE_productName___ViewControllable) {
-        self.viewController = viewController
+    // TODO: Constructor inject child buildable protocols to allow building children.
+    init(interactor: ___VARIABLE_productName___Interactable, viewControllable: ___VARIABLE_productName___ViewControllable) {
+        self.viewControllable = viewControllable
         super.init(interactor: interactor)
         interactor.router = self
     }
@@ -29,7 +29,7 @@ final class ___VARIABLE_productName___Router: Router<___VARIABLE_productName___I
 
     // MARK: - Private
 
-    private let viewController: ___VARIABLE_productName___ViewControllable
+    private let viewControllable: ___VARIABLE_productName___ViewControllable
 }
 
 // MARK: - ___VARIABLE_productName___Routing

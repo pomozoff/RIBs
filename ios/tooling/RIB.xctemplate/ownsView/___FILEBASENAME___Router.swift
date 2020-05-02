@@ -12,7 +12,7 @@ protocol ___VARIABLE_productName___ViewControllable: ViewControllable {
 }
 
 final class ___VARIABLE_productName___Router: ViewableRouter<___VARIABLE_productName___Interactable, ___VARIABLE_productName___ViewControllable> {
-    // TODO: Constructor inject child builder protocols to allow building children.
+    // TODO: Constructor inject child buildable protocols to allow building children.
     override init(
         interactor: ___VARIABLE_productName___Interactable,
         viewController: ___VARIABLE_productName___ViewControllable
